@@ -6,3 +6,9 @@ down:
 
 rebuild:
 	docker compose up -d --build
+
+app:
+	docker compose exec app bash
+
+nginx:
+	docker compose exec nginx bash

@@ -4,7 +4,7 @@ COPY php.ini /user/local/etc/php
 COPY composer.json /var/www/html
 
 RUN apt-get update\
-    && apt-get install -y zlib1g-dev mariadb-client vim libzip-dev \
+    && apt-get install -y zlib1g-dev mariadb-client vim libzip-dev unzip \
     && docker-php-ext-install zip pdo_mysql
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
